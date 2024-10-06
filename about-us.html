@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Sapidex-Services</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+  <link href="assets/css/services-animation.css" rel="stylesheet">
+  <link href="assets/css/mobile-responsive.css" rel="stylesheet">
+
+<style>
+      .core-box {
+        background-color: #031052;
+    padding: 0 120px; /* Adds margin to the left and right */
+  }
+
+  .why {
+    padding: 0 120px; /* Adds margin to the left and right */
+  }
+  .core-values {
+        background-color: #031052;
+        width:100%;
+        height:100%; /* Adds margin to the left and right */
+  }
+  .Why-us {
+    width:100%;
+    height:100%;
+  }
+     /* Flip Card Styles */
+
+  /* The flipping card itself */
+  .value-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+  }
+
+  /* Front side of the card */
+  .value-card-front,
+  .value-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Hide back face */
+    backface-visibility: hidden; /* Hide back face */
+  }
+
+  /* Front side (the icon and title) */
+  .value-card-front {
+    background-color: #0b1c72;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .value-card-front img {
+    font-size: 3rem;
+  }
+  .value-card-front h5 {
+    color: #ffff;
+  }
+  /* Rounded value cards */
+  .value-card {
+    background-color: #0b1c72;
+    width: 100%;
+    height: 300px;
+    border-radius: 15px; /* Making the cards rounded */
+    overflow: hidden; /* Ensures content stays within rounded corners */
+    position: relative;
+    margin-bottom: 30px; /* Adds space between the cards */
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.6s ease-in-out;
+  }
+
+  .value-card-why {
+  
+    width: 100%;
+    height: 350px;
+    border-radius: 20px; /* Making the cards rounded */
+    overflow: hidden; /* Ensures content stays within rounded corners */
+    position: relative;
+    /* Adds space between the cards */
+    text-align: center;
+   
+    transition: transform 0.6s ease-in-out;
+  }
+
+  .value-card-why img {
+    height:200px;
+    width: 150px;
+    margin-bottom:0;
+    padding-bottom:0;
+  }
+
+  .value-card h5 {
+    color: white;
+    margin-bottom: 0;
+
+  }
+
+  .value-card-why h5 {
+    color: white;
+    margin-bottom: 0;
+   
+  }
+
+  /* The sliding back (details) */
+  .value-card .value-details {
+    position: absolute;
+    bottom: -100%; /* Initially hidden below the card */
+    left: 0;
+    width: 100%;
+
+    height: 200px;
+    padding: 20px;
+    background-color: #162046;
+    color: white;
+    transition: bottom 0.4s ease-out;
+    border-radius: 0 0 15px 15px;
+  
+    
+  }
+
+    /* The sliding back (details) */
+    .value-card-why .value-details {
+    position: absolute;
+    bottom: -100%; /* Initially hidden below the card */
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    width: 100%;
+    height: 300px;
+    color: white;
+    transition: bottom 0.4s ease-out;
+    border-radius: 0 0 15px 15px;
+  }
+  .value-card-why:hover .value-details {
+    bottom: 0; 
+    font-size:14px; /* Slide up into view */
+    padding: 10px;
+  }
+
+  /* On hover, slide the details up */
+  .value-card:hover .value-details {
+    bottom: 0;
+    font-size:16px;
+    padding:20px; /* Slide up into view */
+    width: 100%;
+    height: 250px;
+  }
+  </style>
+
+
+
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
+      <!-- Logo aligned to the right -->
+      <a href="index.html" class="logo me-auto d-flex justify-content-end">
+          <img src="assets/img/logo.png" alt="sapidex">
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html#hero">Home</a></li>
+          <li><a href="about-us.html" class="active">About</a></li>
+          <li><a href="services-details.html"><span>Services</span></a>
+          </li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <a class="btn-getstarted" href="contact-us.html">Contact Us</a>
+
+    </div>
+  </header>
+
+  <main class="main">
+    <!-- Section -->
+    
+    <section id="about-us-intro" class="text-center mb-0 py-5 mt-5">
+        <div class="container-fluid">
+          <h1 class="display-4 fw-bold mx-5 px-5 mb-4 mt-4" style="color:#0b1c72; font-size: 52px;">The Leading Top Talent Solution Company</h1>
+          <p class="lead px-5 mx-5 mt-4"><strong> We are a technology company that has been developing quality software solutions for more than 10 years. 
+            With a growing team of 300+ hardworking employees, we have delivered more than 380 projects completed 
+            with a business retention rate of 95%. We provide time zone–aligned services to empower Fortune 500 companies 
+            and leading brands. Our clients include startups to large scale businesses from North America, Middle East, 
+            and Europe. We’ve provided insightful solutions to businesses like Subway, Pepsi, Framesuite, 
+            PostalMethods, DryveNYC, and LightPoint that are amongst 150+ clients in North America only.</strong>
+           
+          </p>
+          <p class="font-weight-bold mt-4 curve-underline-animation">
+           <strong>When We Commit,</strong> 
+            <span class="text-primary">We Always Deliver</span><br></p>
+        <h4><strong> We are a company Powered by Technology and Driven by Trust</strong>  
+          </h4>
+          <a href="contact-us.html" class="btn btn-custom btn-lg mt-4">Get Started &rarr;</a>
+        </div>
+      </section>
+
+
+
+      <!--Why Sapidex Section-->
+<section id="Why-us" class="py-4 text-center bg-light">
+       
+  <div class="container-fluid why">
+      <div class="container section-title " data-aos="fade-up">
+          <h1>Why Sapidex</h1>
+          <h5>We only hire the best tech resources for our team that shorten development cycles while saving our clients over a million dollars a year.</h5>
+        </div>
+        <div class="row justify-content-center">
+      <!-- Card 1: Leading top talent -->
+
+      <div class="col-lg-4 col-md-6 mb-4">
+          <div class="value-card-why">
+            <div class="value-card-inner">
+              <div class="value-card-front bg-secondary">
+                <h4>Leading Top Talent</h4>
+                  <img src="assets/img/core values/talen2.svg">
+             
+              </div>
+              <div class="value-card-back ">
+                
+                <p class="value-details bg-secondary"> We have handpicked the best and brightest professionals who are experts in their respective areas of expertise. Our team members are highly educated and experienced, and bring a wealth of knowledge and skills to every project. </p>
+               
+              </div>
+            </div>
+          </div>
+        </div>
+  
+     
+           <!-- Card 2: Time Zone Alignment -->
+<div class="col-lg-4 col-md-6 mb-4">
+  <div class="value-card-why">
+    <div class="value-card-inner">
+      <div class="value-card-front bg-warning">
+        <h4>Time Zone Alignment</h4>
+          <img src="assets/img/core values/clock.svg">
+   
+      </div>
+      <div class="value-card-back ">
+        <p class="value-details bg-warning">We have team members strategically located in different time zones, which allows us to offer 24/7 support and services to our clients. This means that we can quickly respond to client requests, regardless of their location or the time of day. </p>
+      </div>
+    </div>
+  </div>
+</div>
+    
+           <!-- Card 3:  Experienced Team -->
+<div class="col-lg-4 col-md-6 mb-4">
+  <div class="value-card-why">
+    <div class="value-card-inner">
+      <div class="value-card-front bg-primary ">
+        <h4>Experienced Team</h4>
+          <img src="assets/img/core values/experienced-team.svg">
+       
+      </div>
+      <div class="value-card-back">
+        <p class="value-details bg-primary">With a decade long practical experience in their court, our senior engineers are not only certified in major technological degrees, they are also fluent in the English language. This particular feature along with extensive training under Sapidex, proves to be an asset to take any technological project challenge.</p>
+      </div>
+    </div>
+  </div>
+</div>
+</div> 
+</div>
+</section>
+<!--Why Sapidex End -->
+
+
+
+
+
+      <section id="core-values" class="py-0 text-center">
+       
+        <div class="container-fluid core-box">
+            <div class="container section-title pt-5" data-aos="fade-up">
+                <h1 class="text-white mb-4">Our Core Values</h1>
+              </div>
+              <div class="row justify-content-center">
+            <!-- Card 1: Drive to Inspire -->
+
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="value-card">
+                  <div class="value-card-inner">
+                    <div class="value-card-front">
+                        <img src="assets/img/core values/drive-to-inspire.svg">
+                      <h5>Drive to Inspire</h5>
+                    </div>
+                    <div class="value-card-back">
+                      <p class="value-details">We believe in attention to detail. We observe, implement and get results. We make sure no mistakes are made through QA and testing. We remove or fix any bugs before we hand over the project to the manager.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        
+           
+                 <!-- Card 2: Customer Focus -->
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="value-card">
+          <div class="value-card-inner">
+            <div class="value-card-front">
+                <img src="assets/img/core values/cutomer-focus.svg">
+              <h5>Customer Focus</h5>
+            </div>
+            <div class="value-card-back">
+              <p class="value-details">Our dedicated team is available to assist you every step of the way, ensuring that your project is completed to your complete satisfaction as at Techverx customer satisfaction is our top priority.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+          
+                 <!-- Card 3: Integrity -->
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="value-card">
+          <div class="value-card-inner">
+            <div class="value-card-front">
+                <img src="assets/img/core values/integrity.svg">
+              <h5>Integrity</h5>
+            </div>
+            <div class="value-card-back">
+              <p class="value-details">We believe in being transparent and honest with our clients, delivering on our promises and providing high-quality services. Our reputation for reliability and trustworthiness is a point of pride for us.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>      
+         
+    <div class="row justify-content-center">
+        <!-- Card 4: Teamwork -->
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="value-card">
+            <div class="value-card-inner">
+              <div class="value-card-front">
+                <img src="assets/img/core values/teamwork.svg">
+                <h5>Teamwork</h5>
+              </div>
+              <div class="value-card-back">
+                <p class="value-details">Our team members collaborate closely to bring their diverse skills and perspectives together to deliver the best results for our clients.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+  <!-- Card 5: Passion -->
+  <div class="col-lg-4 col-md-6 mb-4">
+    <div class="value-card">
+      <div class="value-card-inner">
+        <div class="value-card-front">
+            <img src="assets/img/core values/passion.svg">
+          <h5>Passion</h5>
+        </div>
+        <div class="value-card-back">
+          <p class="value-details">We believe in attention to detail. We observe, implement and get results. We make sure no mistakes are made through QA and testing. We remove or fix any bugs before we hand over the project to the manager.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4 col-md-6 mb-4">
+    <div class="value-card">
+      <div class="value-card-inner">
+        <div class="value-card-front">
+            <img src="assets/img/core values/transparency.svg">
+          <h5>Transparency</h5>
+        </div>
+        <div class="value-card-back">
+          <p class="value-details">We believe in attention to detail. We observe, implement and get results. We make sure no mistakes are made through QA and testing. We remove or fix any bugs before we hand over the project to the manager.</p>
+        </div>
+      </div>
+    </div>
+            </div>    
+       
+        </div>
+        </div>
+      </section>
+      
+ 
+      
+
+  
+
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section pt-5 ">
+      <div class="container section-title" data-aos="fade-up">
+        <h1>Contact</h1>
+        <h5>Let's Bring Your Vision to Life! Reach Out to Us Today and Let's Build Something Amazing Together!</h5>
+      </div>
+  <div class="container-fluid my-1">
+    <div class="row">
+      <!-- Left Side (Text and Steps) -->
+      <div class="col-md-6 d-flex align-items-center left-section">
+        <div class="left-content m-3 p-3">
+          <h2 class="text-white">Tell us about your project</h2>
+          <p>What happens next?</p>
+          <ul class="steps-list">
+            <li>
+              <span class="step-number">1</span>
+              An expert contacts you after analyzing your requirements.
+            </li>
+            <br>
+            <li>
+              <span class="step-number">2</span>
+              If needed, we sign an NDA to ensure the highest privacy level.
+            </li>
+            <br>
+            <li>
+              <span class="step-number">3</span>
+              We submit a comprehensive project proposal with estimates, timelines, CVs, etc.
+            </li>
+          </ul>
+        </div>
+        </div>
+      <!-- Form Section -->
+      <div class="col-md-6 p-5 right-section">
+        <h2 class="section-title">Your Vision, Our Expertise</h2>
+        <p>Submit your information to drive success forward.</p>
+        
+        <form action="send_email.php" method="POST" class="needs-validation" novalidate>
+          <!-- Service Type Selection -->
+          <div class="mb-4 p-2">
+            <label class="form-check-label me-3">
+              <input type="radio" name="serviceType" value="staff" class="form-check-input" checked required> Staff Augmentation
+            </label>
+            <label class="form-check-label me-3">
+              <input type="radio" name="serviceType" value="Hourly" class="form-check-input" required> Hourly Plan
+            </label>
+            <label class="form-check-label">
+              <input type="radio" name="serviceType" value="gigs" class="form-check-input" required> Fixed Gigs
+            </label>
+            <div class="invalid-feedback">Please select a service type.</div>
+          </div>
+        
+          <!-- Input Fields -->
+          <div class="row g-3">
+            <div class="col-md-6">
+              <input type="text" id="fullName" name="full_name" class="form-control" placeholder="Full name*" pattern="^[a-zA-Z\s]+$" required>
+              <div class="invalid-feedback">Please enter your full name.</div>
+            </div>
+            <div class="col-md-6">
+              <input type="tel" id="contactNumber" name="contact_number" class="form-control" placeholder="Contact Number*" pattern="^\d{10,15}$" required>
+              <div class="invalid-feedback">Please enter a valid contact number (10-15 digits).</div>
+            </div>
+          </div>
+        
+          <div class="mt-3 m-3">
+            <input type="email" id="email" name="email" class="form-control" placeholder="Email*" required>
+            <div class="invalid-feedback">Please enter a valid email address.</div>
+          </div>
+        
+          <div class="mt-3 m-3">
+            <input type="text" id="techStack" name="tech_stack" class="form-control" placeholder="Enter your preferred tech stack...">
+          </div>
+        
+          <div class="mt-3 m-3">
+            <textarea class="form-control" id="message" name="message" rows="4" placeholder="Tell us how we can help.*" required></textarea>
+            <div class="invalid-feedback">Please tell us how we can help.</div>
+          </div>
+        
+          <div class="mt-3 m-3">
+            <input class="form-check-input" type="checkbox" id="ndaCheck">
+            <label class="form-check-label" for="ndaCheck"><strong>I want to protect my data by signing an NDA</strong></label>
+          </div>
+        
+          <div class="text-end"> <!-- Align the button to the right -->
+            <button type="submit" class="btn btn-custom my-4">
+              Submit <i class="fas fa-arrow-right"></i> <!-- Font Awesome icon -->
+            </button>
+          </div>
+        </form>
+        
+      </div>
+
+     
+    </div>
+  </div>
+</section> <!--/Contact Section -->
+
+  </main>
+  <footer id="footer" class="footer position-relative light-background">
+    <!-- Background overlay -->
+    <div class="container footer-top position-relative pt-0">
+      <div class="row gy-4 p-5">
+        <div class="col-lg-3 col-md-6 footer-about">
+          <a href="index.html" class="logo">
+            <span class="sitename">Sapidex</span>
+          </a>
+          <p class="lh-lg">We'd love to hear more about your project and how we can help bring your vision to life. Reach out to us today, and let's start building something great together!</p>
+        </div>
+        <div class="col-lg-3 col-md-6 footer-links">
+          <h4>Expertise</h4>
+          <ul>
+            <li><a href="#">Custom Web Development</a></li>
+            <li><a href="#">Web App Development</a></li>
+            <li><a href="#">QA & Testing</a></li>
+            <li><a href="#">UI/UX DevOps</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6 footer-links">
+          <h4>Contact Us</h4>
+          <ul>
+            <li>21/B G1 market</li>
+            <li>Johar Town Lahore , Pakistan</li>
+            <li><strong>Phone:</strong> <span>+923136290333</span></li>
+            <li><strong>Email:</strong> <span>info@example.com</span></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6 footer-links text-center text-md-start">
+          <h4>Jump Into Social Media</h4>
+          <div class="social-links d-grid gap-2 mt-4">
+            <!-- First Row of Social Media Icons -->
+            <div class="d-flex justify-content-center gap-3">
+              <a href="#"><i class="bi bi-twitter-x"></i></a>
+              <a href="#"><i class="bi bi-facebook"></i></a>
+            </div>
+        
+            <!-- Second Row of Social Media Icons -->
+            <div class="d-flex justify-content-center gap-3 mt-3">
+              <a href="#"><i class="bi bi-instagram"></i></a>
+              <a href="#"><i class="bi bi-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+   
+
+  <div class="container-fluid mb-0 pb-0">
+    <div class="row d-flex align-items-center copyright py-0 px-0">
+      <div class="col-md-6 footer-terms px-5 py-0">
+        <ul class="list-inline">
+          <li class="list-inline-item"> <img src="assets/img/favicon.png" alt="sapidex" style="width:50px; height:50px"></li> 
+          <li class="list-inline-item">  <p class="text-light">&copy; Sapidex 2024</p></li>
+        </ul>
+         
+      
+      </div>
+      <div class="col-md-6 text-end footer-terms px-5 py-0 ">
+        <ul class="list-inline">
+          <li class="list-inline-item p-3"><a href="privacy-policy.html">Privacy Policy</a></li> 
+          <li class="list-inline-item p-3"><a href="terms-conditions.html">Terms & Conditions</a></li>
+          <li class="list-inline-item p-3"> 
+          <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a></li>
+        </ul>      
+    </div>
+      
+ 
+    </div>
+  </div>
+</footer>
+
+
+  
+
+
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+   <script src=" https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="assets/js/main.js"></script> 
+<script>
+  // Example starter JavaScript for disabling form submissions if there are invalid fields
+  (function () {
+    'use strict'
+  
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    var forms = document.querySelectorAll('.needs-validation')
+  
+    // Loop over them and prevent submission
+    Array.prototype.slice.call(forms)
+      .forEach(function (form) {
+        form.addEventListener('submit', function (event) {
+          if (!form.checkValidity()) {
+            event.preventDefault()
+            event.stopPropagation()
+          }
+  
+          form.classList.add('was-validated')
+        }, false)
+      })
+  })();
+  </script>
+  
+
+
+</body>
+
+</html>

@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Sapidex-Contact Us</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+  <link href="assets/css/mobile-responsive.css" rel="stylesheet">
+<style>
+#miCanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0; /* Canvas is behind */
+  pointer-events: none; /* Prevent interaction with the canvas */
+}
+  
+</style>
+  <style>
+/* Contact Card Styling */
+/* Add padding inside the card */
+
+
+
+.contact-card {
+  background-color: #fff;
+  border-radius: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border: none;
+  padding: 20px; /* Add padding inside the card */
+}
+
+.contact-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+/* Center the icon inside the card */
+.icon-circle {
+  width: 60px;
+  height: 60px;
+  background-color: #3a77f0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 24px;
+  margin: 0 auto; /* Centers the icon horizontally */
+}
+
+/* Text Styling */
+.contact-card p {
+  color: #333;
+  font-size: 1.1rem;
+  margin-top: 20px; /* Adds space between the icon and text */
+}
+
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .contact-card {
+    margin-bottom: 20px;
+  }
+}
+
+  </style>
+  <style>
+.contact-section {
+  background: linear-gradient(135deg, #dceaff 20%,#fff 10%, #8ab0f7 100%);
+  position: relative;
+  overflow: hidden;
+  padding: 50px 0;
+}
+
+
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.text-section {
+  flex: 1;
+  padding-right: 50px;
+}
+
+.text-section h1 {
+  font-size: 3em;
+  color: #4a4a8e;
+  margin-bottom: 10px;
+}
+
+.text-section p {
+  font-size: 1.2em;
+  color: #7a7a9e;
+}
+
+.image-section {
+  flex: 1;
+  position: relative;
+  display: flex;
+  justify-content: center; /* Centers the image horizontally */
+}
+
+.image-section img {
+  max-width: 80%;
+  height:auto;
+  opacity: 0;  /* Start with image hidden */
+  transform: translateX(100%);  /* Position image off-screen to the right */
+  transition: all 1s ease-in-out;  /* Add a smooth transition */
+  background:transparent;
+}
+
+/* Sliding In Animation */
+.image-section img.show {
+  opacity: 1;  /* Make the image visible */
+  transform: translateX(0);  /* Slide the image to its original position */
+}
+/* Container Styling */
+.contact-container {
+  background-color: #f8f9fa;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+
+
+
+
+  </style>
+
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
+      <!-- Logo aligned to the right -->
+      <a href="index.html" class="logo me-auto d-flex justify-content-end">
+          <img src="assets/img/logo.png" alt="sapidex">
+      </a>
+  </div>
+    <div class="container-fluid position-relative d-flex align-items-center justify-content-center">
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html#hero">Home</a></li>
+          <li><a href="about-us.html">About</a></li>
+          <li><a href="services-details.html"><span>Services</span></a>
+          </li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+      <a class="btn-custom mx-5" href="contact-us.html">Contact Us</a>
+    </div>
+  </header>
+  <main class="main">
+        <div class="container-fluid">
+          <div class="row d-flex justify-content-center ">
+                 <!-- Contact Section -->
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+
+      <canvas id="miCanvas"></canvas>
+      <!-- Image Header Section -->
+      <div class="container py-5 d-flex align-items-center justify-content-between">
+     
+        <div class="text-section">
+          <h1 data-aos="fade-up" class="curve-underline-animation">We'll Be Glad To Assist You!</h1>
+          <p class="text-dark mt-4">Ready to explore how Sapidex can drive innovation and growth for your business? We’re here to help you discover the possibilities. Whether you’re seeking software solutions, strategic consulting, or technical expertise, our team is eager to collaborate with you.</p>
+
+        </div>
+        <div class="image-section">
+          <img src="assets/img/contact4.png" alt="Assistance Image" id="sliding-image">
+        </div>
+      </div>
+ 
+      <div class="container my-5">
+        <div class="row justify-content-center">
+          <!-- Card 1 (Address) -->
+          <div class="col-md-4">
+            <div class="card contact-card text-center p-4">
+              <div class="icon-circle mb-3">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <p>21/B G1 market
+                 <br> Johar Town Lahore , Pakistan</p>
+            </div>
+          </div>
+      
+          <!-- Card 2 (Phone) -->
+          <div class="col-md-4">
+            <div class="card contact-card text-center p-4">
+              <div class="icon-circle mb-3">
+                <i class="fas fa-phone-alt"></i>
+              </div>
+              <p>+923136290333 <br>+923136290333</p>
+            </div>
+          </div>
+      
+          <!-- Card 3 (Email) -->
+          <div class="col-md-4">
+            <div class="card contact-card text-center p-4">
+              <div class="icon-circle mb-3">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <p class="p-3">info@sapidex.co </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
+</section>
+
+
+
+   <!-- Contact Section -->
+   <section id="contact" class="contact-section pt-5 ">
+    <div class="container section-title" data-aos="fade-up">
+      <h1>Contact</h1>
+      <h5>Let's Bring Your Vision to Life! Reach Out to Us Today and Let's Build Something Amazing Together!</h5>
+    </div>
+<div class="container-fluid">
+  <div class="row mx-5 px-5">
+    <!-- Left Side (Text and Steps) -->
+    <div class="col-md-6 d-flex align-items-center left-section contact-container">
+      <div class="left-content m-3 p-3">
+        <h2 class="text-white">Tell us about your project</h2>
+        <p>What happens next?</p>
+        <ul class="steps-list">
+          <li>
+            <span class="step-number">1</span>
+            An expert contacts you after analyzing your requirements.
+          </li>
+          <br>
+          <li>
+            <span class="step-number">2</span>
+            If needed, we sign an NDA to ensure the highest privacy level.
+          </li>
+          <br>
+          <li>
+            <span class="step-number">3</span>
+            We submit a comprehensive project proposal with estimates, timelines, CVs, etc.
+          </li>
+        </ul>
+      </div>
+      </div>
+    <!-- Form Section -->
+    <div class="col-md-6 p-5 right-section contact-container">
+      <h2 class="section-title">Your Vision, Our Expertise</h2>
+      <p>Submit your information to drive success forward.</p>
+      
+      <form action="send_email.php" method="POST" class="needs-validation" novalidate>
+        <!-- Service Type Selection -->
+        <div class="mb-4 p-2">
+          <label class="form-check-label me-3">
+            <input type="radio" name="serviceType" value="staff" class="form-check-input" checked required> Staff Augmentation
+          </label>
+          <label class="form-check-label me-3">
+            <input type="radio" name="serviceType" value="Hourly" class="form-check-input" required> Hourly Plan
+          </label>
+          <label class="form-check-label">
+            <input type="radio" name="serviceType" value="gigs" class="form-check-input" required> Fixed Gigs
+          </label>
+          <div class="invalid-feedback">Please select a service type.</div>
+        </div>
+      
+        <!-- Input Fields -->
+        <div class="row g-3">
+          <div class="col-md-6">
+            <input type="text" id="fullName" name="full_name" class="form-control" placeholder="Full name*" pattern="^[a-zA-Z\s]+$" required>
+            <div class="invalid-feedback">Please enter your full name.</div>
+          </div>
+          <div class="col-md-6">
+            <input type="tel" id="contactNumber" name="contact_number" class="form-control" placeholder="Contact Number*" pattern="^\d{10,15}$" required>
+            <div class="invalid-feedback">Please enter a valid contact number (10-15 digits).</div>
+          </div>
+        </div>
+      
+        <div class="mt-3 m-3">
+          <input type="email" id="email" name="email" class="form-control" placeholder="Email*" required>
+          <div class="invalid-feedback">Please enter a valid email address.</div>
+        </div>
+      
+        <div class="mt-3 m-3">
+          <input type="text" id="techStack" name="tech_stack" class="form-control" placeholder="Enter your preferred tech stack...">
+        </div>
+      
+        <div class="mt-3 m-3">
+          <textarea class="form-control" id="message" name="message" rows="4" placeholder="Tell us how we can help.*" required></textarea>
+          <div class="invalid-feedback">Please tell us how we can help.</div>
+        </div>
+      
+        <div class="mt-3 m-3">
+          <input class="form-check-input" type="checkbox" id="ndaCheck">
+          <label class="form-check-label" for="ndaCheck"><strong>I want to protect my data by signing an NDA</strong></label>
+        </div>
+      
+        <div class="text-end"> <!-- Align the button to the right -->
+          <button type="submit" class="btn btn-custom my-4">
+            Submit <i class="fas fa-arrow-right"></i> <!-- Font Awesome icon -->
+          </button>
+        </div>
+      </form>
+      
+    </div>
+
+   
+  </div>
+</div>
+</section> <!--/Contact Section -->
+
+</main>
+<footer id="footer" class="footer position-relative light-background">
+  <!-- Background overlay -->
+  <div class="container footer-top position-relative pt-0">
+    <div class="row gy-4 p-5">
+      <div class="col-lg-3 col-md-6 footer-about">
+        <a href="index.html" class="logo">
+          <span class="sitename">Sapidex</span>
+        </a>
+        <p class="lh-lg">We'd love to hear more about your project and how we can help bring your vision to life. Reach out to us today, and let's start building something great together!</p>
+      </div>
+      <div class="col-lg-3 col-md-6 footer-links">
+        <h4>Expertise</h4>
+        <ul>
+          <li><a href="#">Custom Web Development</a></li>
+          <li><a href="#">Web App Development</a></li>
+          <li><a href="#">QA & Testing</a></li>
+          <li><a href="#">UI/UX DevOps</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-md-6 footer-links">
+        <h4>Contact Us</h4>
+        <ul>
+          <li>21/B G1 market</li>
+          <li>Johar Town Lahore , Pakistan</li>
+          <li><strong>Phone:</strong> <span>+923136290333</span></li>
+          <li><strong>Email:</strong> <span>info@example.com</span></li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-md-6 footer-links text-center text-md-start">
+        <h4>Jump Into Social Media</h4>
+        <div class="social-links d-grid gap-2 mt-4">
+          <!-- First Row of Social Media Icons -->
+          <div class="d-flex justify-content-center gap-3">
+            <a href="#"><i class="bi bi-twitter-x"></i></a>
+            <a href="#"><i class="bi bi-facebook"></i></a>
+          </div>
+      
+          <!-- Second Row of Social Media Icons -->
+          <div class="d-flex justify-content-center gap-3 mt-3">
+            <a href="#"><i class="bi bi-instagram"></i></a>
+            <a href="#"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+ 
+
+<div class="container-fluid mb-0 pb-0">
+  <div class="row d-flex align-items-center copyright py-0 px-0">
+    <div class="col-md-6 footer-terms px-5 py-0">
+      <ul class="list-inline">
+        <li class="list-inline-item"> <img src="assets/img/favicon.png" alt="sapidex" style="width:50px; height:50px"></li> 
+        <li class="list-inline-item">  <p class="text-light">&copy; Sapidex 2024</p></li>
+      </ul>
+       
+    
+    </div>
+    <div class="col-md-6 text-end footer-terms px-5 py-0 ">
+      <ul class="list-inline">
+        <li class="list-inline-item p-3"><a href="privacy-policy.html">Privacy Policy</a></li> 
+        <li class="list-inline-item p-3"><a href="terms-conditions.html">Terms & Conditions</a></li>
+        <li class="list-inline-item p-3"> 
+        <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a></li>
+      </ul>      
+  </div>
+    
+
+  </div>
+</div>
+</footer>
+
+
+
+
+
+
+<!-- Preloader -->
+<div id="preloader"></div>
+
+<!-- Vendor JS Files -->
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/vendor/php-email-form/validate.js"></script>
+<script src="assets/vendor/aos/aos.js"></script>
+<script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+<script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+<script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+<script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+<!-- Main JS File -->
+ <script src=" https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="assets/js/main.js"></script> 
+<script>
+// Example starter JavaScript for disabling form submissions if there are invalid fields
+(function () {
+  'use strict'
+
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  var forms = document.querySelectorAll('.needs-validation')
+
+  // Loop over them and prevent submission
+  Array.prototype.slice.call(forms)
+    .forEach(function (form) {
+      form.addEventListener('submit', function (event) {
+        if (!form.checkValidity()) {
+          event.preventDefault()
+          event.stopPropagation()
+        }
+
+        form.classList.add('was-validated')
+      }, false)
+    })
+})();
+</script>
+
+  <script>
+
+window.addEventListener('load', function() {
+  // Add 'show' class to the image after a short delay
+  setTimeout(function() {
+    document.getElementById('sliding-image').classList.add('show');
+  }, 200);  // Adjust the delay as needed
+});
+  </script>
+<script>
+  let canvas = document.getElementById("miCanvas");
+let context = canvas.getContext("2d");
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+let mouseCoords = {
+  x: undefined,
+  y: undefined,
+}
+
+window.addEventListener("mousemove", (e) => {
+
+  if (mouseCoords.x < e.x) {
+    puntos.forEach(punto => {
+      punto.x -= - 0.6
+    });
+  }
+
+  if (mouseCoords.x > e.x) {
+    puntos.forEach(punto => {
+      punto.x += - 0.6
+    });
+  }
+
+  if (mouseCoords.y < e.y) {
+    puntos.forEach(punto => {
+      punto.y -= - 0.6
+    });
+  }
+
+  if (mouseCoords.y > e.y) {
+    puntos.forEach(punto => {
+      punto.y += - 0.6
+    });
+  }
+  
+  mouseCoords.x = e.x;
+  mouseCoords.y = e.y;      
+})
+
+
+function Punto() {
+
+  this.x = Math.random() * canvas.width;
+  this.y = Math.random() * canvas.height;
+  this.size = Math.random() * 3;
+  this.floatX = Math.random() * 0.3 - 0.1;
+  this.floatY = Math.random() * 0.3 - 0.1;
+  this.color = randomColor();
+
+  this.draw = function () {
+    context.beginPath();
+    context.fillStyle = this.color;
+    context.arc(this.x, this.y, this.size, 0, 360);
+    context.fill();
+  }
+
+  this.update = function () {
+
+    if (this.x > canvas.width) this.x = -10;
+    if (this.x < -20) this.x = canvas.width;
+    if (this.y > canvas.height) this.y = -10;
+    if (this.y < -20) this.y = canvas.height;
+
+    this.x += this.floatX;
+    this.y += this.floatY;
+    this.draw();
+  }
+}
+
+let puntos = [];
+for (let i = 0; i < 150; i++)  puntos[i] = new Punto();
+
+function move() {
+
+  context.clearRect(0, 0, canvas.width, canvas.height);
+
+  puntos.forEach(punto => {
+    punto.update();
+  });
+
+  requestAnimationFrame(move);
+}
+
+move();
+
+function randomColor() {
+  let random = Math.random() * 3;
+  if (random > 2) return "rgb(206, 206, 206)";
+  if (random < 2 && random > 1) return "gray";
+  if (random < 1) return "#7db424";
+}
+</script>
+
+</body>
+
+</html>

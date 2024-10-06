@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Sapidex-Services</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+        <!-- Bootstrap JS and jQuery -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+  <link href="assets/css/services-animation.css" rel="stylesheet">
+  <link href="assets/css/mobile-responsive.css" rel="stylesheet">
+
+  <style>
+    /* Card hover and active effect */
+    .category-card {
+      padding: 20px;
+      border-radius: 15px;
+      background-color: #f5f5f5;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .category-card:hover {
+      background-color: #fff;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .category-card.active {
+      background-color: #fff;
+      border-left: 5px solid #00c1fe; /* Highlight the selected card */
+    }
+
+    .right-panel {
+      text-align: center;
+    }
+
+    .right-panel img {
+      max-width: 100%;
+      border-radius: 10px;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .right-panel img:hover {
+      transform: scale(1.05); /* Slight zoom effect */
+    }
+
+    .description {
+      margin-top: 20px;
+      font-size: 1.2em;
+    }
+
+    .description strong {
+      display: block;
+      margin-bottom: 10px;
+    }
+  </style>
+  <style>
+
+
+    .tab-content .tab-pane {
+        padding: 30px 0;
+    }
+    .stack-image {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+    .learn-more-btn {
+        text-align: center;
+        margin-top: 20px;
+        
+    }
+    .nav-tabs {
+        border-bottom: none; /* Remove the bottom border */
+        padding: 15px 0; /* Increase padding for more height */
+    }
+    .nav-item {
+        flex: 1; /* Make the nav items take equal space */
+    }
+    .nav-link {
+        width: 100%; /* Make the nav-link fill the parent width */
+        text-align: center; /* Center align text */
+        color: #000; /* Default text color */
+        background-color: #007bff; /* Default background color */
+        border: 1px solid #dee2e6; /* Border to separate tabs */
+        border-bottom: none; /* Remove bottom border */
+        padding: 15px 0; /* Increase padding for more height */
+        font-size: 20px;
+    }
+    .nav-link:hover {
+        background-color: #d1d9e2; /* Hover background color */
+        color: #fff; /* Hover text color */
+    }
+    .nav-link.active {
+        background-color: #007bff; /* Active background color */
+        color: #fff; /* Active text color */
+    }
+</style>
+<style>
+  .service-image {
+    display: none; /* Hide all images by default */
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  .service-image.active {
+    display: block; /* Show only the active image */
+  }
+
+  .services-list a {
+    text-decoration: none;
+    color: #000;
+    display: block;
+    padding: 8px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    transition: background-color 0.3s;
+  }
+
+  .services-list a:hover,
+  .services-list a.active {
+    background-color: #e7f1ff;
+  }
+
+
+
+</style>
+<style>
+.project-discussion-container {
+    background-color: #f3f3f3; /* Light background for the container */
+}
+
+.project-discussion {
+  background: linear-gradient(90deg, #062b81,#194bbe, #5abce6);
+    border-radius: 20px;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.project-discussion .btn {
+    font-size: 1.2rem;
+    border: 2px solid white;
+    color: white;
+}
+
+.project-discussion .btn:hover {
+    background-color: white;
+    color: #0077e0;
+}
+
+
+.project-discussion p {
+    margin-bottom: 0;
+    font-size: 1rem;
+}
+
+
+</style>
+<style>
+
+.development-process {
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 40px;
+}
+
+.accordion-item {
+  margin-bottom: 10px;
+}
+
+.accordion-header .accordion-button {
+  display: flex;
+  justify-content: space-between;
+}
+
+.step-badge {
+  background-color: #007bff;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 20px;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 10px;
+}
+
+.image-container img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+</style>
+
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
+      <!-- Logo aligned to the right -->
+      <a href="index.html" class="logo me-auto d-flex justify-content-end">
+          <img src="assets/img/logo.png" alt="sapidex">
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html#hero">Home</a></li>
+          <li><a href="about-us.html">About</a></li>
+          <li><a href="services-details.html" class="active"><span>Services</span></a>
+          </li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+      <a class="btn-getstarted" href="contact-us.html">Contact Us</a>
+
+    </div>
+  </header>
+
+  <main class="main">
+    <!-- Section -->
+    
+    <section id="services-sec" class="services-section">
+      <ul class="bubbles">
+                    
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        
+        </ul>
+      <div class="container">
+        <div class="row align-items-center">
+          <!-- Left Side: Text Content -->
+          <div class="col-md-6 text-content">
+            <h1>Services to fit your team and needs</h1>
+            <p>Transform your business with our agile, DevOps-centric approach, delivering scalable solutions, real-time analytics, and strategic modernization.</p>
+            <a href="#contact" class="btn  btn-lg btn-custom-claim text-dark">Tell us about your project</a>
+          </div>
+    
+          <!-- Right Side: Single Image -->
+          <div class="col-md-6 d-flex justify-content-center">
+            <img src="assets/img/services-pg.png" alt="Services Image" class="img-fluid-ser">
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- End Hero Section-->
+    <!-- Page Title -->
+   
+      
+    </div><!-- End Page Title -->
+
+    <!-- Service Details Section -->
+    <section id="service-details" class="service-details section">
+      <div class="container my-5">
+        <div class="row">
+          <!-- Left: Categories -->
+          <div class="col-md-4">
+            <div class="category-card active" data-category="front-end">
+              <h4>Front End</h4>
+              <p>Design and build stunning user interfaces.</p>
+            </div>
+            <div class="category-card mt-3" data-category="back-end">
+              <h4>Backend</h4>
+              <p>Develop powerful server-side solutions.</p>
+              
+            </div>
+            <div class="category-card mt-3" data-category="databases">
+              <h4>Databases</h4>
+              <p>Manage data with secure and scalable databases.</p>
+
+             
+            </div>
+            <div class="category-card mt-3" data-category="chatgpt-integration">
+              <h4>ChatGPT Integration</h4>
+              <p>Integrate AI-driven chatbot solutions.</p>
+             
+            </div>
+            <div class="category-card mt-3" data-category="customize-chatbot">
+              <h4>Chatbot Customization</h4>
+              <p>Tailor chatbot functionality for your needs.</p>
+
+             
+            </div>
+          </div>
+    
+          <!-- Right: Image and Description -->
+          <div class="col-md-8 right-panel">
+            <img src="assets/img/frontend.png" id="service-img" alt="Service Image">
+            <div class="description">
+              <strong id="service-title">Front End</strong>
+              <h5 id="service-description" class="lh-lg">Design and build stunning user interfaces.
+                We craft visually appealing and user-friendly interfaces tailored to your brand.
+                  Our team ensures responsive designs that provide seamless experiences across all devices.
+                  Using modern frameworks like React and Vue.js, we build fast and interactive front-end solutions.
+              </h5>
+             
+            </div>
+          </div>
+        </div>
+      </div>
+    
+
+      
+     
+      
+    </section><!-- /Service Details Section -->
+
+    <section class="project-discussion-container py-5">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Choose 'Sapidex' for Dynamic & Expandable Services</h2> 
+      </div>
+      <div class="container">
+        <ul class="bubbles">
+                    
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          
+          </ul>
+          <div class="row justify-content-center">
+              
+                  <div class="project-discussion p-5">
+                      <div class="row align-items-center">
+                          <div class="col-lg-8 p-3">
+                              <h1 class="text-white">Let's Discuss Your Project</h1>
+                              <h5 class="text-white lh-lg">
+                                  Get free consultation and let us know your project idea to turn it into an amazing digital product.
+                              </h5>
+                          </div>
+                          <div class="col-lg-4 text-center p-3">
+                              <a href="contact-us.html" class="btn btn-outline-light rounded-pill">
+                                  GET FREE CONSULTATION <i class="ms-2 fas fa-arrow-right"></i>
+                              </a>
+                          </div>
+                      </div>
+                  </div>
+             
+          </div>
+      </div>
+  </section>
+
+<!--How we work section-->
+<section class="development-process container-fluid py-5 px-5">
+  <div class="container-fluid section-title" data-aos="fade-up">
+    <h2>A Snapshot Of Our Web Application Development Process</h2>
+    <h5>Following is the process of our web application development services that has enabled us to leave our digital footprints across the IT sector:</h5>
+  </div>
+  <div class="row">   
+    <!-- Left Column: Steps -->
+    <div class="col-md-6">
+      
+      <div class="accordion" id="developmentAccordion">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#step1" aria-expanded="false" onclick="changeImage('assets/img/services/service-img-1.png')">
+              Planning <span class="step-badge m-3">Step 01</span>
+              
+            </button>
+          </h2>
+          <div id="step1" class="accordion-collapse collapse">
+            <div class="accordion-body">Initially we start with the planning out a strategic idea of how we will be carrying out the entire web application development process.</div>
+          </div>
+        </div>
+        
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#step2" aria-expanded="false" onclick="changeImage('assets/img/services/service-img-1.png')">
+              Strategizing The Development <span class="step-badge m-3">Step 02</span>
+             
+            </button>
+          </h2>
+          <div id="step2" class="accordion-collapse collapse">
+            <div class="accordion-body">To save ourselves from excessive obstacles,we discuss how the web app will perform and what results we should expect.</div>
+          </div>
+        </div>
+        
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#step3" aria-expanded="false" onclick="changeImage('assets/img/services/service-img-1.png')">
+              Prototype <span class="step-badge m-3">Step 03</span>
+           
+            </button>
+          </h2>
+          <div id="step3" class="accordion-collapse collapse">
+            <div class="accordion-body">We create a profitable product,refine your ideas through market research validation.Save expenses and eliminate risks by working with our web application development team.</div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#step4" aria-expanded="false" onclick="changeImage('assets/img/services/service-img-1.png')">
+              Development Phase <span class="step-badge m-3">Step 04</span>
+           
+            </button>
+          </h2>
+          <div id="step4" class="accordion-collapse collapse">
+            <div class="accordion-body">After the small details have been taken care of ,we delve into the real challenge "the development phase"</div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#step5" aria-expanded="false" onclick="changeImage('assets/img/services/service-img-1.png')">
+              Quality Assurance <span class="step-badge m-3">Step 05</span>
+       
+            </button>
+          </h2>
+          <div id="step5" class="accordion-collapse collapse">
+            <div class="accordion-body">Quality Assurance (QA) is one major step in web app development because it ensures the web app is free from bugs and works without flaws.</div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#step6" aria-expanded="false" onclick="changeImage('assets/img/services/service-img-1.png')">
+              Development Phase <span class="step-badge m-3">Step 06</span>
+            
+            </button>
+          </h2>
+          <div id="step6" class="accordion-collapse collapse">
+            <div class="accordion-body">Speaking of updates and maintenance,we work hard on your project even after the project is completly developed</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Column: Image -->
+    <div class="col-md-6">
+      <div class="image-container">
+        <img id="stepImage" src="assets/img/services/service-img-1.png" class="img-fluid" alt="Development Process">
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section pt-5 ">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Contact</h2>
+        <h5>Let's Bring Your Vision to Life! Reach Out to Us Today and Let's Build Something Amazing Together!</h5>
+      </div>
+  <div class="container-fluid my-1">
+    <div class="row">
+      <!-- Left Side (Text and Steps) -->
+      <div class="col-md-6 d-flex align-items-center left-section">
+        <div class="left-content m-3 p-3">
+          <h2 class="text-white">Tell us about your project</h2>
+          <p>What happens next?</p>
+          <ul class="steps-list">
+            <li>
+              <span class="step-number">1</span>
+              An expert contacts you after analyzing your requirements.
+            </li>
+            <br>
+            <li>
+              <span class="step-number">2</span>
+              If needed, we sign an NDA to ensure the highest privacy level.
+            </li>
+            <br>
+            <li>
+              <span class="step-number">3</span>
+              We submit a comprehensive project proposal with estimates, timelines, CVs, etc.
+            </li>
+          </ul>
+        </div>
+        </div>
+      <!-- Form Section -->
+      <div class="col-md-6 p-5 right-section">
+        <h2 class="section-title">Your Vision, Our Expertise</h2>
+        <p>Submit your information to drive success forward.</p>
+        
+        <form action="send_email.php" method="POST" class="needs-validation" novalidate>
+          <!-- Service Type Selection -->
+          <div class="mb-4 p-2">
+            <label class="form-check-label me-3">
+              <input type="radio" name="serviceType" value="staff" class="form-check-input" checked required> Staff Augmentation
+            </label>
+            <label class="form-check-label me-3">
+              <input type="radio" name="serviceType" value="Hourly" class="form-check-input" required> Hourly Plan
+            </label>
+            <label class="form-check-label">
+              <input type="radio" name="serviceType" value="gigs" class="form-check-input" required> Fixed Gigs
+            </label>
+            <div class="invalid-feedback">Please select a service type.</div>
+          </div>
+        
+          <!-- Input Fields -->
+          <div class="row g-3">
+            <div class="col-md-6">
+              <input type="text" id="fullName" name="full_name" class="form-control" placeholder="Full name*" pattern="^[a-zA-Z\s]+$" required>
+              <div class="invalid-feedback">Please enter your full name.</div>
+            </div>
+            <div class="col-md-6">
+              <input type="tel" id="contactNumber" name="contact_number" class="form-control" placeholder="Contact Number*" pattern="^\d{10,15}$" required>
+              <div class="invalid-feedback">Please enter a valid contact number (10-15 digits).</div>
+            </div>
+          </div>
+        
+          <div class="mt-3 m-3">
+            <input type="email" id="email" name="email" class="form-control" placeholder="Email*" required>
+            <div class="invalid-feedback">Please enter a valid email address.</div>
+          </div>
+        
+          <div class="mt-3 m-3">
+            <input type="text" id="techStack" name="tech_stack" class="form-control" placeholder="Enter your preferred tech stack...">
+          </div>
+        
+          <div class="mt-3 m-3">
+            <textarea class="form-control" id="message" name="message" rows="4" placeholder="Tell us how we can help.*" required></textarea>
+            <div class="invalid-feedback">Please tell us how we can help.</div>
+          </div>
+        
+          <div class="mt-3 m-3">
+            <input class="form-check-input" type="checkbox" id="ndaCheck">
+            <label class="form-check-label" for="ndaCheck"><strong>I want to protect my data by signing an NDA</strong></label>
+          </div>
+        
+          <div class="text-end"> <!-- Align the button to the right -->
+            <button type="submit" class="btn btn-custom my-4">
+              Submit <i class="fas fa-arrow-right"></i> <!-- Font Awesome icon -->
+            </button>
+          </div>
+        </form>
+        
+      </div>
+
+     
+    </div>
+  </div>
+</section> <!--/Contact Section -->
+
+  </main>
+  <footer id="footer" class="footer position-relative light-background">
+    <!-- Background overlay -->
+    <div class="container footer-top position-relative pt-0">
+      <div class="row gy-4 p-5">
+        <div class="col-lg-3 col-md-6 footer-about">
+          <a href="index.html" class="logo">
+            <span class="sitename">Sapidex</span>
+          </a>
+          <p class="lh-lg">We'd love to hear more about your project and how we can help bring your vision to life. Reach out to us today, and let's start building something great together!</p>
+        </div>
+        <div class="col-lg-3 col-md-6 footer-links">
+          <h4>Expertise</h4>
+          <ul>
+            <li><a href="#">Custom Web Development</a></li>
+            <li><a href="#">Web App Development</a></li>
+            <li><a href="#">QA & Testing</a></li>
+            <li><a href="#">UI/UX DevOps</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6 footer-links">
+          <h4>Contact Us</h4>
+          <ul>
+            <li>21/B G1 market</li>
+            <li>Johar Town Lahore , Pakistan</li>
+            <li><strong>Phone:</strong> <span>+923136290333</span></li>
+            <li><strong>Email:</strong> <span>info@example.com</span></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6 footer-links text-center text-md-start">
+          <h4>Jump Into Social Media</h4>
+          <div class="social-links d-grid gap-2 mt-4">
+            <!-- First Row of Social Media Icons -->
+            <div class="d-flex justify-content-center gap-3">
+              <a href="#"><i class="bi bi-twitter-x"></i></a>
+              <a href="#"><i class="bi bi-facebook"></i></a>
+            </div>
+        
+            <!-- Second Row of Social Media Icons -->
+            <div class="d-flex justify-content-center gap-3 mt-3">
+              <a href="#"><i class="bi bi-instagram"></i></a>
+              <a href="#"><i class="bi bi-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+   
+
+  <div class="container-fluid mb-0 pb-0">
+    <div class="row d-flex align-items-center copyright py-0 px-0">
+      <div class="col-md-6 footer-terms px-5 py-0">
+        <ul class="list-inline">
+          <li class="list-inline-item"> <img src="assets/img/favicon.png" alt="sapidex" style="width:50px; height:50px"></li> 
+          <li class="list-inline-item">  <p class="text-light">&copy; Sapidex 2024</p></li>
+        </ul>
+         
+      
+      </div>
+      <div class="col-md-6 text-end footer-terms px-5 py-0 ">
+        <ul class="list-inline">
+          <li class="list-inline-item p-3"><a href="privacy-policy.html">Privacy Policy</a></li> 
+          <li class="list-inline-item p-3"><a href="terms-conditions.html">Terms & Conditions</a></li>
+          <li class="list-inline-item p-3"> 
+          <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a></li>
+        </ul>      
+    </div>
+      
+ 
+    </div>
+  </div>
+</footer>
+
+
+  
+
+
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+   <script src=" https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="assets/js/main.js"></script> 
+
+
+<script>
+// Data for each category
+const categoryData = {
+  "front-end": {
+    image: "assets/img/frontend.png",
+    title: "Front End",
+    description: `We craft visually appealing and user-friendly interfaces tailored to your brand.
+                  Our team ensures responsive designs that provide seamless experiences across all devices.
+                  Using modern frameworks like React and Vue.js, we build fast and interactive front-end solutions.`
+  },
+  "back-end": {
+    image: "assets/img/backend.png",
+    title: "Backend",
+    description: `We develop robust and scalable backend systems to handle high volumes of traffic.
+                  With expertise in Node.js, Python, and PHP, we ensure your application's smooth performance.
+                  Our backend solutions prioritize security, efficiency, and long-term reliability.`
+  },
+  "databases": {
+    image: "assets/img/database.png",
+    title: "Databases",
+    description: `We design and manage scalable database systems optimized for performance and growth.
+                  From MySQL to MongoDB, our team ensures data integrity and quick access.
+                  Our database solutions are tailored for real-time processing and large-scale applications.`
+  },
+  "chatgpt-integration": {
+    image: "assets/img/chatgpt3.jpg",
+    title: "ChatGPT Integration",
+    description: `Elevate your business with AI-driven conversational solutions using ChatGPT.
+                  We integrate intelligent chatbots to automate customer interactions and boost engagement.
+                  Our AI solutions are tailored to provide seamless, human-like conversations across multiple platforms.`
+  },
+  "customize-chatbot": {
+    image: "assets/img/chatbot.jpg",
+    title: "Chatbot Customization",
+    description: `Our customized chatbots offer dynamic interactions to suit your specific business needs.
+                  We specialize in building personalized, multilingual chatbots for enhanced customer experiences.
+                  From automated support to sales assistance, our chatbots streamline communication effectively.`
+  }
+};
+
+// When a category card is clicked, update the image and description dynamically
+$('.category-card').on('click', function() {
+  const category = $(this).data('category');
+
+  // Change the active class
+  $('.category-card').removeClass('active');
+  $(this).addClass('active');
+
+  // Update the image, title, and description
+  $('#service-img').attr('src', categoryData[category].image);
+  $('#service-title').text(categoryData[category].title);
+  $('#service-description').html(categoryData[category].description);
+});
+
+</script>
+
+
+
+
+<script>
+  // Example starter JavaScript for disabling form submissions if there are invalid fields
+  (function () {
+    'use strict'
+  
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    var forms = document.querySelectorAll('.needs-validation')
+  
+    // Loop over them and prevent submission
+    Array.prototype.slice.call(forms)
+      .forEach(function (form) {
+        form.addEventListener('submit', function (event) {
+          if (!form.checkValidity()) {
+            event.preventDefault()
+            event.stopPropagation()
+          }
+  
+          form.classList.add('was-validated')
+        }, false)
+      })
+  })();
+  </script>
+  
+  <script>
+document.addEventListener('DOMContentLoaded', function () {
+  const accordionItems = document.querySelectorAll('.accordion-item');
+  const stepImage = document.getElementById('stepImage');
+  const images = [
+    'assets/img/services/service-img-1.png',  
+    'assets/img/services/service-img-2.png',  
+    'assets/img/services/service-img-3.png',  
+    'assets/img/services/services-img-4.png',
+    'assets/img/services/service-img-5.png',
+    'assets/img/services/service-img-6.png',
+ 
+  ];
+
+  accordionItems.forEach((item, index) => {
+    const button = item.querySelector('.accordion-button');
+
+    button.addEventListener('click', function () {
+      // Ensure the index is within the bounds of the images array
+      if (index < images.length) {
+        stepImage.src = images[index];
+      } else {
+        console.error('No image found for this step.');
+      }
+    });
+  });
+});
+
+
+  </script>
+
+
+</body>
+
+</html>

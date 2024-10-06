@@ -1,0 +1,166 @@
+@media (max-width: 368px) {
+  /* Adjust header layout */
+  .header {
+      flex-direction: column; /* Stack elements vertically */
+      align-items: flex-start; /* Align items to the left */
+      padding: 10px; /* Add padding for better spacing */
+  }
+
+  .container-fluid {
+      display: flex;
+      justify-content: space-between; /* Space between logo and nav */
+      width: 100%; /* Full width */
+  }
+
+  /* Contact Us button adjustments */
+  .btn-getstarted {
+      font-size: 10px; /* Adjust font size */
+      padding: 6px 8px; /* Smaller padding */
+      margin-top: 8px; /* Space from the nav toggle */
+      margin-left: 10px; /* Space to the left for visibility */
+      white-space: nowrap; /* Prevent wrapping */
+      order: 1; /* Ensure it's placed correctly */
+      flex: 0 0 auto; /* Prevent it from stretching */
+  }
+
+  /* Mobile nav toggle adjustments */
+  .mobile-nav-toggle {
+      font-size: 24px; /* Increase size for better visibility */
+      margin-left: 10px; /* Ensure space between button and nav toggle */
+      cursor: pointer; /* Pointer on hover */
+      order: 2; /* Ensure it comes after the button */
+      display: inline-block; /* Ensure it displays correctly */
+      z-index: 100; /* Ensure it's above other elements */
+  }
+
+  /* Ensure navigation menu is visible */
+  #navmenu {
+      display: none; /* Hide by default on small screens */
+  }
+
+  /* Show the menu when the toggle button is clicked */
+  #navmenu.active {
+      display: flex; /* Use flex for alignment */
+      flex-direction: column; /* Stack items vertically */
+      position: absolute; /* Position it absolutely */
+      top: 50px; /* Adjust to place it below the header */
+      left: 0; /* Align to the left */
+      right: 0; /* Take full width */
+      background: white; /* Optional: background color */
+      padding: 10px 0; /* Spacing around the menu */
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Shadow for depth */
+      z-index: 99; /* Ensure it's above other content */
+  }
+
+  /* Navigation links styling */
+  #navmenu ul {
+      list-style: none; /* Remove bullets */
+      padding-left: 0; /* Remove left padding */
+      margin: 0; /* Reset margin */
+  }
+
+  #navmenu a {
+      font-size: 14px; /* Adjust font size for links */
+      padding: 10px 15px; /* Add padding for clickable area */
+      text-align: left; /* Align text to the left */
+  }
+}
+
+
+
+/* Media query for .section-title on screens 368px wide and 520px high */
+@media (max-width: 368px) {
+  .section-title {
+    padding-bottom: 10px;
+    text-align: center;
+  }
+
+  .section-title h1 {
+    font-size: 24px; /* Reduced size for smaller screens */
+    font-weight: 400;
+  }
+
+  .section-title h5 {
+    font-size: 12px; /* Slightly smaller text */
+    line-height: 1.6; /* Adjust line height */
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+
+  .section-title h1:before, .section-title h1:after {
+    width: 20px; /* Reduce the line width */
+    height: 1px;
+  }
+
+  .section-title h1:before {
+    margin: 0 10px 5px 0;
+  }
+
+  .section-title h1:after {
+    margin: 0 0 5px 10px;
+  }
+}
+
+@media (max-width: 520px) {
+  /* Adjust footer padding */
+  #footer .footer-top {
+    padding: 20px 10px; /* Reduce padding */
+  }
+
+  /* Make footer sections stack vertically */
+  .footer-about,
+  .footer-links {
+    margin-bottom: 20px; /* Add spacing between sections */
+    text-align: center; /* Center align text for mobile */
+  }
+
+  /* Adjust the logo size */
+  .logo {
+    font-size: 24px; /* Reduce logo font size */
+  }
+
+  /* Adjust heading sizes */
+  .footer-links h4 {
+    font-size: 18px; /* Reduce heading size */
+  }
+
+  /* Adjust paragraph size */
+  .footer-about p {
+    font-size: 14px; /* Reduce paragraph font size */
+  }
+
+  /* Adjust list items */
+  .footer-links ul {
+    padding-left: 0; /* Remove left padding */
+    list-style-type: none; /* Remove bullet points */
+  }
+
+  /* Center social media icons */
+  .social-links {
+    justify-content: center; /* Center align social links */
+  }
+
+  /* Adjust copyright section */
+  .copyright {
+    flex-direction: column; /* Stack items vertically */
+    text-align: center; /* Center align text */
+  }
+
+  /* Adjust the spacing in the copyright section */
+  .footer-terms {
+    margin-bottom: 10px; /* Add spacing below */
+  }
+
+  /* Adjust the text size in the copyright section */
+  .footer-terms p {
+    font-size: 12px; /* Reduce font size */
+  }
+
+  /* Adjust list-inline items in footer */
+  .list-inline-item {
+    padding: 0 5px; /* Reduce padding */
+  }
+}
+
+
+
